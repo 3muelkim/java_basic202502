@@ -96,6 +96,33 @@ public class ArrayListExample {
         Collections.addAll(score, 78, 100, 88, 79, 100, 21, 56, 100);
         System.out.println("score = " + score);
 
+        // 컬렉션 내의 객체의 개수 구하기
+        System.out.println("100점 학생 수: " + Collections.frequency(score, 100));
+
+        // 최대값, 최소값
+        System.out.println("최대값: " + Collections.max(score));
+        System.out.println("최소값: " + Collections.min(score));
+
+        // 정렬 (오름차)
+        Collections.sort(score);
+        System.out.println("score = " + score);
+
+//        Collections.reverse(score); 단순 역순 배치 (정렬 x)
+        Collections.sort(score, Collections.reverseOrder()); // 내림차 정렬
+        System.out.println("score = " + score);
+
+        // 두 요소의 위치를 교체 swap(리스트, i, j)
+        Collections.swap(score, 3, 7);
+        System.out.println("score = " + score);
+
+        // 리스트 내의 요소를 무작위로 섞기
+        Collections.shuffle(score);
+        System.out.println("score = " + score);
+
+        // 원하는 객체로 컬렉션을 전부 초기화
+        Collections.fill(score, 100);
+        System.out.println("score = " + score);
+
 
     }
 
